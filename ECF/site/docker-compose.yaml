@@ -1,0 +1,32 @@
+
+services:
+  mysql_blog:
+    image: mysql:8.0
+    container_name: mysql_blog
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword   # mot de passe root
+      MYSQL_DATABASE: blog        # nom de la base créée au démarrage
+      MYSQL_USER: hugo                # utilisateur
+      MYSQL_PASSWORD: hugo123        # mot de passe utilisateur
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_blog_data:/var/lib/mysql         # persistance des données
+
+  phpmyadmin_blog:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin_blog
+    restart: always
+    environment:
+      PMA_HOST: mysql_blog                    # nom du service MySQL
+      PMA_USER: hugo                       # utilisateur MySQL (souvent root)
+      PMA_PASSWORD: hugo123          # mot de passe MySQL
+    ports:
+      - "8080:80"                         # accès via http://localhost:8080
+    depends_on:
+      - mysql_blog
+
+volumes:
+  mysql_blog_data:
+

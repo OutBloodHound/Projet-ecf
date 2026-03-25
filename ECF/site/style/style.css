@@ -1,0 +1,25 @@
+/* article-style */
+
+.imgBackground {
+    padding: 1rem;
+    background-size: cover;
+    background-repeat: none;
+}
+
+.fontStyle {
+    font-family: "Roboto Mono", monospace;
+}
+
+.fontTitle{
+    font-family: 'ITCMachine';
+}
+
+.cardBackground {
+    background-image: url("/img/glitchback.png");
+    background-size: contain;
+}
+
+@font-face {
+    font-family: ITCMachine;
+    src: url(ITCMachine-Medium.ttf);
+}
