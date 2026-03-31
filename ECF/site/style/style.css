@@ -1,25 +1,159 @@
+/* general */
+
+body {
+    font-family: "Roboto Mono", monospace;
+    background-image: url('/img/black-paper.png');
+    background-color: rgb(2, 7, 13);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+  width: 100%;    /* Prend toute la largeur de son parent */
+  height: 300px;  /* Une hauteur fixe de 300 pixels */
+  min-height: 100px; /* Empêche l'utilisateur de trop le réduire */
+  max-height: 600px; /* Empêche l'utilisateur de trop l'agrandir */
+}
+
+/* nav{
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+} */
+.custom-nav {
+    /* Ta couleur de fond personnalisée */
+    background-color: rgba(0, 0, 0, 0.8); 
+    /* Si tu veux ta bordure néon/LED en bas de la nav */
+    border-bottom: 2px solid #55daff;
+    box-shadow: 0 0 15px rgba(85, 218, 255, 0.5);
+}
+
+/* Pour changer la couleur des liens de la nav */
+.custom-nav .nav-link {
+    color: #55daff !important;
+}
+
+/* Pour le survol des liens */
+.custom-nav .nav-link:hover {
+    color: #fff !important;
+    text-shadow: 0 0 5px #55daff;
+    background-color: none;
+}
+
+.buttonbBGnav{
+    background-color: rgba(11, 11, 11, 0.9);
+    border: 2px solid #55daff;
+    border-radius: 0.4em;
+    box-shadow: 0 0 10px rgba(85, 218, 255, 0.5);
+}
+
+.dropdownColor{
+    color: #fff !important;
+}
+
+.hoverLink:hover{
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    color: #55daff !important;
+}
+
+.buttonbBG{
+    background: linear-gradient(90deg, rgba(11, 11, 11, 0) 0%, rgba(11, 11, 11, 0.25) 5%, rgba(11, 11, 11, 0.75) 15%, rgba(11, 11, 11, 0.95) 35%, rgba(11, 11, 11, 0.95) 65%, rgba(11, 11, 11, 0.75) 85%, rgba(11, 11, 11, 0.25) 95%, rgba(11, 11, 11, 0) 100%), repeating-linear-gradient(0deg, transparent, transparent 2px, #46beff 2px, rgb(2, 106, 252) 3px);
+    border: 2px solid #55daff;
+    border-radius: 0.4em;
+    box-shadow: 0 0 15px rgba(85, 218, 255, 0.5);
+    color: white;
+}
+
+
+/* index*/
+.cardBackgroundColor{
+    background: rgba(11, 11, 11, 0.1);
+    border: 2px solid #55daff;
+    border-radius: 0.4em;
+    box-shadow: 0 0 10px rgba(85, 218, 255, 0.5);
+    color: white;
+}
+
+.indexCards{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+.buttonbBGindex{
+    border: 2px solid #55daff;
+    border-radius: 0.4em;
+    box-shadow: 0 0 15px rgba(85, 218, 255, 0.5);
+    color: white;
+}
+
+.cardBackgroundColor:hover{
+    box-shadow: 0 0 15px rgba(85, 218, 255, 0.8);
+}
+
+
 /* article-style */
 
-.imgBackground {
+/* .imgBackground {
     padding: 1rem;
     background-size: cover;
-    background-repeat: none;
-}
+    background-repeat: non;
+} */
 
-.fontStyle {
-    font-family: "Roboto Mono", monospace;
-}
-
-.fontTitle{
-    font-family: 'ITCMachine';
+.fontTitle {
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .cardBackground {
-    background-image: url("/img/glitchback.png");
-    background-size: contain;
+    background: linear-gradient(90deg, rgba(11, 11, 11, 0) 0%, rgba(11, 11, 11, 0.25) 5%, rgba(11, 11, 11, 0.75) 15%, rgba(11, 11, 11, 0.95) 35%, rgba(11, 11, 11, 0.95) 65%, rgba(11, 11, 11, 0.75) 85%, rgba(11, 11, 11, 0.25) 95%, rgba(11, 11, 11, 0) 100%), repeating-linear-gradient(0deg, transparent, transparent 2px, #011a28 2px, rgb(0, 25, 61) 3px);
+    border: 2px solid #011a28;
+    border-radius: 0.4em;
+    box-shadow: 0 0 20px rgba(1, 26, 40, 0.8);
+    color: white;
+    color: #ffffff;
 }
 
-@font-face {
-    font-family: ITCMachine;
-    src: url(ITCMachine-Medium.ttf);
+.img_perso{
+    height: auto; 
+    width:105%;
+    object-fit: cover;
+    object-position: center;
 }
+
+
+/* form */
+
+.formBackground{
+    background-color: #000000;
+    border: 2px solid #55daff;
+    border-radius: 0.4em;
+    box-shadow: 0 0 10px rgba(85, 218, 255, 0.5);
+    padding: 15rem;
+}
+
+form{
+    max-width: 450px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+/*commentaires*/
+
+.commentBackgroundColor{
+
+    border: 2px solid #55daff;
+    border-radius: 0.4em;
+    box-shadow: 0 0 10px rgba(85, 218, 255, 0.5);
+    color: white;
+}
+
+.commentBackgroundColor::placeholder{
+    color: white;
+}
+
+.postedComment{
+    border: 2px solid #55daff;
+    border-radius: 0.4em;
+    box-shadow: 0 0 10px rgba(85, 218, 255, 0.5)
+}   
